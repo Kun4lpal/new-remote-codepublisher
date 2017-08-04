@@ -1,0 +1,41 @@
+
+                                             CodeAnalysis
+    ==============================================================================================
+     Mon Feb  6 16:38:13 2017
+     Path: "C:\Kunal\Proj_1\Executive"
+     Args: run.cpp, /m, /r, /f
+                                                                               
+           Code Metrics - Start Line, Size (lines/code), and Complexity (number of scopes)
+    ==============================================================================================
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                             namespace                   Global Namespace       1       1      17
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                   run.cpp    function                    startPersisting      65      15       2
+                   run.cpp    function                    Requirement_1_2      83      41       1
+                   run.cpp    function                      Requirement_3     127      38       1
+                   run.cpp    function                      Requirement_4     168      46       1
+                   run.cpp    function  Requirement_5_and_6_with_type_str     217      37       1
+                   run.cpp    function  Requirement_5_and_6_with_type_Wid     257      41       1
+                   run.cpp    function                   generateElements     302      15       1
+                   run.cpp    function              Requirement_7_8_and_9     318      32       1
+                   run.cpp    function                 RequirementQuery_6     353      23       1
+                   run.cpp    function                     Requirement_10     379      26       1
+                   run.cpp    function                        Comments_12     408       6       1
+                   run.cpp    function                      Comments_12_1     415       4       1
+                   run.cpp    function                     createElements     420      21       1
+                   run.cpp    function                     Requirement_12     442      32       1
+                   run.cpp    function                               main     477      16       1
+
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+
+
+
+    searched     3 dirs
+   processed     1 files

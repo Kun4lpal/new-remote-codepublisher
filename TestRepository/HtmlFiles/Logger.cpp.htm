@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script src="../Scripts/Script.js"></script>
+  <link rel="stylesheet" href="../Scripts/CSS-sheet.css"></link>
+  </head>
+  <body>
+  <h3>
+  Dependencies!
+
+  </h3>
+  <h4>
+  <a class="indent" href="Logger.h.htm">
+  1- Logger.h
+
+  </a>
+  </h4>
+  <pre>
+  /////////////////////////////////////////////////////////////////////
+  // Logger.cpp - log text messages to std::ostream                  //
+  // ver 1.2                                                         //
+  //-----------------------------------------------------------------//
+  // Jim Fawcett (c) copyright 2015                                  //
+  // All rights granted provided this copyright notice is retained   //
+  //-----------------------------------------------------------------//
+  // Language:    C++, Visual Studio 2015                            //
+  // Application: Several Projects, CSE687 - Object Oriented Design  //
+  // Author:      Jim Fawcett, Syracuse University, CST 4-187        //
+  //              jfawcett@twcny.rr.com                              //
+  /////////////////////////////////////////////////////////////////////
+  
+  #include &lt;functional&gt;
+  #include &lt;fstream&gt;
+  #include &lt;windows.h&gt;
+  #include "Logger.h"
+  #include "../Utilities/Utilities.h"
+  
+  using namespace Logging;
+  
+  //----&lt; send text message to std::ostream &gt;--------------------------
+  
+  void Logger::write(const std::string& msg)
+  {
+    if(_ThreadRunning)
+      _queue.enQ(msg);
+  }
+  void Logger::title(const std::string& msg, char underline)
+  {
+    std::string temp = "\n  " + msg + "\n " + std::string(msg.size() + 2, underline);
+    write(temp);
+  }
+  //----&lt; attach logger to existing std::ostream &gt;---------------------
+  
+  void Logger::attach(std::ostream* pOut) 
+  { 
+    streams_.push_back(pOut);
+    //_pOut = pOut; 
+  }
+  //----&lt; start logging &gt;----------------------------------------------
+  /*
+   *  log to all the attached streams
+   */
+  void Logger::start()
+  {
+    if (_ThreadRunning)
+      return;
+    _ThreadRunning = true;
+    std::function&lt;void()&gt; tp = [=]() {
+      while (true)
+      {
+        std::string msg = _queue.deQ();
+        if (msg == "quit")
+        {
+          _ThreadRunning = false;
+          break;
+        }
+        for (auto pStrm : streams_)
+        {
+          *pStrm &lt;&lt; msg;
+        }
+      }
+    };
+    _pThr = new std::thread (tp);
+    //thr.detach();
+  }
+  //----&lt; has logger been started? &gt;-----------------------------------
+  
+  bool Logger::running()
+  {
+    return _ThreadRunning;
+  }
+  //----&lt; suspend logger &gt;---------------------------------------------
+  
+  void Logger::pause(bool doPause)
+  {
+    if (doPause)
+    {
+      _Paused = true;
+      ::SuspendThread(_pThr-&gt;native_handle());
+    }
+    else
+    {
+      _Paused = false;
+      ::ResumeThread(_pThr-&gt;native_handle());
+    }
+  }
+  //----&lt; is logger currently paused? &gt;--------------------------------
+  
+  bool Logger::paused()
+  {
+    return _Paused;
+  }
+  //----&lt; wait for logging to empty input queue &gt;----------------------
+  
+  void Logger::flush()
+  {
+    if (_ThreadRunning && !_Paused)
+    {
+      while (_queue.size() &gt; 0)
+        ;
+      for (auto pStream : streams_)
+        pStream-&gt;flush();
+    }
+  }
+  //----&lt; stop logging &gt;-----------------------------------------------
+  
+  void Logger::stop(const std::string& msg)
+  {
+    if (_ThreadRunning)
+    {
+      if(msg != "")
+        write(msg);
+      write("quit");    // request thread to stop
+      if (_pThr-&gt;joinable())
+        _pThr-&gt;join();  // wait for queue to empty
+  
+      _ThreadRunning = false;
+    }
+  }
+  //----&lt; wait for logger to finish &gt;----------------------------------
+  
+  void Logger::wait()
+  {
+    if (_ThreadRunning && _pThr-&gt;joinable())
+      _pThr-&gt;join();
+  }
+  //----&lt; stop logging thread &gt;----------------------------------------
+  
+  Logger::~Logger()
+  {
+    stop();
+  }
+  
+  struct Cosmetic
+  {
+    ~Cosmetic() { std::cout &lt;&lt; "\n\n"; }
+  } cosmetic;
+  
+  #ifdef TEST_LOGGER
+  
+  using Util = Utilities::StringHelper;
+  
+  int main()
+  {
+    //Util::Title("Testing Logger Class");
+    Logger log;
+    log.attach(&std::cout);
+    std::ofstream out("logFile.txt");
+    if (out.good())
+      log.attach(&out);
+    else
+      std::cout &lt;&lt; "\n  couldn't open logFile for writing";
+    log.write("\n  won't get logged - not started yet");
+    log.start();
+    log.title("Testing Logger Class", '=');
+    log.write("\n  one");
+    log.write("\n  two");
+    log.write("\n  fini");
+    log.stop();
+    log.write("\n  won't get logged - stopped");
+    log.start();
+    log.write("\n  starting again");
+    log.write("\n  and stopping again");
+    log.stop("\n  log terminating now");
+    log.wait();
+  
+    StaticLogger&lt;1&gt;::attach(&std::cout);
+    StaticLogger&lt;1&gt;::attach(&out);
+    StaticLogger&lt;1&gt;::start();
+    StaticLogger&lt;1&gt;::write("\n");
+    StaticLogger&lt;1&gt;::title("Testing StaticLogger class");
+    StaticLogger&lt;1&gt;::write("\n  static logger at work");
+    Logger& logger = StaticLogger&lt;1&gt;::instance();
+    logger.write("\n  static logger still at work");
+  
+    for(size_t i=0; i&lt;5; ++i)
+      logger.write("\n  a log msg");
+    logger.write("\n  suspending logger");
+    logger.pause(true);
+    for (size_t i = 0; i&lt;5; ++i)
+      logger.write("\n  a log msg written while log suspended");
+  
+    logger.pause(false);
+    logger.write("\n  a log msg written after log resumed");
+    logger.stop("\n  stopping static logger");
+    logger.wait();
+    out.close();
+  }
+  
+  #endif
+
+  </pre>
+  </body>
+</html>

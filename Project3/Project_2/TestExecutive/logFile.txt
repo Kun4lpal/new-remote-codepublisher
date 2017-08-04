@@ -1,0 +1,87 @@
+
+                                             CodeAnalysis
+    ==============================================================================================
+     Tue Mar  7 18:33:35 2017
+     Path: "C:\Kunal\Course\OOD\Proj2\v1\Project_2\TestExecutive"
+     Args: *.h, *.cpp, TestExecutive.cpp, TestExecutive.h, /m, /r, /f
+                                                                               
+           Code Metrics - Start Line, Size (lines/code), and Complexity (number of scopes)
+    ==============================================================================================
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                             namespace                   Global Namespace       1       1     117
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+           TestExecutive.h       class                        AnalFileMgr     105      26       1
+           TestExecutive.h       class                      TestExecutive     135      54       1
+           TestExecutive.h       class                        AnalFileMgr     105      26      13
+           TestExecutive.h       class                      TestExecutive     135      54      85
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+         TestExecutive.cpp    function                        AnalFileMgr     363       2       1
+         TestExecutive.cpp    function                               file     369       7       1
+         TestExecutive.cpp    function                                dir     379       4       1
+         TestExecutive.cpp    function                               done     386       2       1
+         TestExecutive.cpp    function                           numFiles     392       3       1
+         TestExecutive.cpp    function                            numDirs     399       3       1
+         TestExecutive.cpp    function                        AnalFileMgr     363       2       1
+         TestExecutive.cpp    function                               file     369       7       1
+         TestExecutive.cpp    function                                dir     379       4       1
+         TestExecutive.cpp    function                               done     386       2       1
+         TestExecutive.cpp    function                           numFiles     392       3       1
+         TestExecutive.cpp    function                            numDirs     399       3       1
+         TestExecutive.cpp    function                      TestExecutive     115       9       2
+         TestExecutive.cpp    function                     ~TestExecutive     128       2       1
+         TestExecutive.cpp    function                          showUsage     134      13       1
+         TestExecutive.cpp    function                 ProcessCommandLine     155      35       8
+         TestExecutive.cpp    function           showCommandLineArguments     194      12       2
+         TestExecutive.cpp    function                    getAnalysisPath     210       3       1
+         TestExecutive.cpp    function                     getSourceFiles     221       8       1
+         TestExecutive.cpp    function                     cppHeaderFiles     241      12       3
+         TestExecutive.cpp    function                     cppImplemFiles     257      12       3
+         TestExecutive.cpp    function                        csharpFiles     272      12       3
+         TestExecutive.cpp    function                          fileSLOCs     287       3       1
+         TestExecutive.cpp    function                         systemTime     293       9       1
+         TestExecutive.cpp    function                  processSourceCode     306      40       8
+         TestExecutive.cpp    function                           numFiles     350       3       1
+         TestExecutive.cpp    function                            numDirs     357       3       1
+         TestExecutive.cpp    function                       getTypeTable     426      21       1
+         TestExecutive.cpp    function                getStrongComponents     448      42       4
+         TestExecutive.cpp    function                      TestExecutive     115       9       2
+         TestExecutive.cpp    function                     ~TestExecutive     128       2       1
+         TestExecutive.cpp    function                          showUsage     134      13       1
+         TestExecutive.cpp    function                 ProcessCommandLine     155      35       8
+         TestExecutive.cpp    function           showCommandLineArguments     194      12       2
+         TestExecutive.cpp    function                    getAnalysisPath     210       3       1
+         TestExecutive.cpp    function                     getSourceFiles     221       8       1
+         TestExecutive.cpp    function                     cppHeaderFiles     241      12       3
+         TestExecutive.cpp    function                     cppImplemFiles     257      12       3
+         TestExecutive.cpp    function                        csharpFiles     272      12       3
+         TestExecutive.cpp    function                          fileSLOCs     287       3       1
+         TestExecutive.cpp    function                         systemTime     293       9       1
+         TestExecutive.cpp    function                  processSourceCode     306      40       8
+         TestExecutive.cpp    function                           numFiles     350       3       1
+         TestExecutive.cpp    function                            numDirs     357       3       1
+         TestExecutive.cpp    function                       getTypeTable     426      21       1
+         TestExecutive.cpp    function                getStrongComponents     448      42       4
+         TestExecutive.cpp    function                        getInstance     109       3       1
+         TestExecutive.cpp    function                           contains     232       5       1
+         TestExecutive.cpp    function                           comments     403      20       1
+         TestExecutive.cpp      lambda                                [])     494      49       5
+         TestExecutive.cpp    function                        getInstance     109       3       1
+         TestExecutive.cpp    function                           contains     232       5       1
+         TestExecutive.cpp    function                           comments     403      20       1
+         TestExecutive.cpp      lambda                                [])     494      49       5
+
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+
+
+
+    searched     3 dirs
+   processed     4 files

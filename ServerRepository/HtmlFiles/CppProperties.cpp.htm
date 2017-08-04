@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script src="../Scripts/Script.js"></script>
+  <link rel="stylesheet" href="../Scripts/CSS-sheet.css"></link>
+  </head>
+  <body>
+  <h3>
+  Dependencies!
+
+  </h3>
+  <h4>
+  <a class="indent" href="CppProperties.h.htm">
+  1- CppProperties.h
+
+  </a>
+  </h4>
+  <h4>
+  <a class="indent" href="AbstrSynTree.cpp.htm">
+  2- AbstrSynTree.cpp
+
+  </a>
+  </h4>
+  <pre>
+  /////////////////////////////////////////////////////////////////////
+  // CppProperties.cpp - Defines read/write and read only properties //
+  //                                                                 //
+  // Jim Fawcett, CSE687 - Object Oriented Design, Spring 2017       //
+  /////////////////////////////////////////////////////////////////////
+  
+  #ifdef TEST_CPPPROPERTIES
+  
+  #include "CppProperties.h"
+  #include &lt;string&gt;
+  #include &lt;iostream&gt;
+  
+  class X
+  {
+  public:
+    Property&lt;std::string&gt; name;
+    Property&lt;double&gt; isMutable;
+    Property&lt;const double&gt; pi = 3.1415927;
+    Property&lt;const std::string&gt; constName = "a const name";
+    void show()
+    {
+      std::cout &lt;&lt; "\n  name:      " &lt;&lt; name;
+      std::cout &lt;&lt; "\n  isMutable: " &lt;&lt; isMutable;
+      std::cout &lt;&lt; "\n  pi:        " &lt;&lt; pi;
+      std::cout &lt;&lt; "\n  constName: " &lt;&lt; constName;
+      std::cout &lt;&lt; "\n";
+    }
+  };
+  
+  /////////////////////////////////////////////////////////////////////
+  // Z class:
+  // - demonstrates how to customize getter and setter functions
+  //   without changing public interface of Z.
+  // - That is important because it means that should we decide,
+  //   after a class was published, that we should control the
+  //   way the property behaves, we won't break existing clients.
+  
+  /*----&lt; demo function for custom getter and setter &gt;---------------*/
+  
+  std::string toUpper(const std::string& str)
+  {
+    std::string upperS = str;
+    for (auto& c : upperS)
+      c = toupper(c);
+    return upperS;
+  }
+  
+  /////////////////////////////////////////////////////////////////////
+  // - We can also modify the behavior of the propert by overriding
+  //   the property virtual functions.  That, however, modifies user
+  //   interface.
+  //
+  class UpperCaseProperty : public Property&lt;std::string&gt;  // changes property name
+  {
+  public:
+    UpperCaseProperty(const std::string& s) 
+    { 
+      value = toUpper(s); 
+    }
+    virtual Property&lt;std::string&gt;& operator=(const std::string &s)
+    {
+      value = toUpper(s);
+      return *this;
+    }
+  };
+  
+  class Y
+  {
+  public:
+    UpperCaseProperty name = "jim";
+  };
+  
+  class Z
+  {
+  public:
+    Z()
+    {
+      name.newSetter(
+        [](const std::string& s) {
+          // normally you won't want to use console output - this is just for demo
+          std::cout &lt;&lt; "\n  setter converting property to uppercase";
+          return toUpper(s); 
+        }
+      );
+      // this also works:
+      // name.setter(toUpper);
+  
+      name.newGetter(
+        [](const std::string& val) {
+        std::string s = val;
+        s[0] = tolower(s[0]);
+        // normally you won't want to use console output - this is just for demo
+        std::cout &lt;&lt; "\n  getter converting first character of property to lowercase";
+        return s;
+      }
+      );
+    }
+    Property&lt;std::string&gt; name;
+  };
+  
+  int main()
+  {<button onclick="myFunc('int main22')" class="w3 - btn w3 - hover - black w3 - dark - grey" style="box - shadow:none">CLICK</button><div id="int main22" >
+    std::cout &lt;&lt; "\n  Demonstrate C++ Properties class";
+    std::cout &lt;&lt; "\n ==================================";
+  
+    X x;
+    x.name = "Jim";
+    x.show();
+    std::cout &lt;&lt; "\n  setting isMutable to pi:";
+    std::cout &lt;&lt; "\n --------------------------";
+    x.isMutable = x.pi;
+    x.show();
+    
+    //x.constName = "a new name";  // fails to compile - that's good
+  
+    std::cout &lt;&lt; "\n  making a copy of x, called newX with new name:";
+    std::cout &lt;&lt; "\n ------------------------------------------------";
+    X newX(x);
+    newX.name = "joe";
+    newX.show();
+  
+    std::cout &lt;&lt; "\n";
+    std::cout &lt;&lt; "\n  demonstrate overriding property \"getter\" function to return capitalized name string";
+    std::cout &lt;&lt; "\n -------------------------------------------------------------------------------------";
+    Y y;
+    std::cout &lt;&lt; "\n  y.name = " &lt;&lt; y.name;
+    std::cout &lt;&lt; "\n";
+  
+    std::cout &lt;&lt; "\n  demonstrate providing custom getter and setter functions";
+    std::cout &lt;&lt; "\n ----------------------------------------------------------";
+    std::cout &lt;&lt; "\n";
+  
+    Z z;
+    z.name = "fawcett";
+    std::string temp = z.name;
+    std::cout &lt;&lt; "\n  z.name = " &lt;&lt; temp;
+    temp = (z.name).getValue();
+    std::cout &lt;&lt; "\n  name property's internal store value is: " &lt;&lt; temp;
+    std::cout &lt;&lt; "\n";
+  
+    std::cout &lt;&lt; "\n  making a copy of z, called newZ:";
+    std::cout &lt;&lt; "\n ----------------------------------";
+    Z newZ(z);
+    temp = newZ.name;
+    std::cout &lt;&lt; "\n  newZ.name = " &lt;&lt; temp;
+  
+    std::cout &lt;&lt; "\n\n";
+  </div>}
+  #endif
+
+  </pre>
+  </body>
+</html>

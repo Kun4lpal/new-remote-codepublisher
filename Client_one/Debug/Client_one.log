@@ -1,0 +1,5 @@
+﻿  Window.cpp
+  .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+Message.lib(HttpMessage.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+  Client_one.vcxproj -> C:\Kunal\Course\OOD\9-26\Project4\Debug\Client_one.exe
+  Client_one.vcxproj -> C:\Kunal\Course\OOD\9-26\Project4\Debug\Client_one.pdb (Full PDB)

@@ -1,0 +1,53 @@
+
+                                             CodeAnalysis
+    ==============================================================================================
+     Mon Apr  3 22:06:40 2017
+     Path: "C:\Users\kupal\Desktop\New folder\Project3\Project3\HtmlDocument"
+     Args: Tag.cpp, Tag.h, /m, /r, /f
+                                                                               
+           Code Metrics - Start Line, Size (lines/code), and Complexity (number of scopes)
+    ==============================================================================================
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                             namespace                   Global Namespace       1       1      60
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                     Tag.h   namespace                          Universal      59      53      58
+                     Tag.h       class                            TagType      60       2       1
+                     Tag.h       class                        Readability      66       2       1
+                     Tag.h       class                          TagParser      70       2       1
+                     Tag.h       class                                Tag      75      36      54
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                   Tag.cpp    function                                Tag      62       2       1
+                   Tag.cpp    function                                Tag      67       4       1
+                   Tag.cpp    function                                Tag      74       5       1
+                   Tag.cpp    function                           ToString      82      38       9
+                   Tag.cpp    function                            SetName     123      15       3
+                   Tag.cpp    function                       GetAttribute     141      10       1
+                   Tag.cpp    function                        GetSelector     154       4       1
+                   Tag.cpp    function                       SetAttribute     161       9       1
+                   Tag.cpp    function                            SetType     173       4       1
+                   Tag.cpp    function                         SetContent     180       4       1
+                   Tag.cpp    function                        ToggleClass     187      10       3
+                   Tag.cpp    function                        AppendChild     200       4       1
+                   Tag.cpp    function                      UseClosingTag     207       4       1
+                   Tag.cpp    function                       modifyString     214      30       9
+                   Tag.cpp    function                      formatContent     246      22       5
+                   Tag.cpp    function                   replaceSubString     271       8       2
+                   Tag.cpp    function                  findAllOccurences     282       9       2
+                   Tag.cpp    function       parseAndSetClassIdAttributes     294      35      10
+                   Tag.cpp    function                               main     334       6       1
+
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+
+
+
+    searched     3 dirs
+   processed     2 files

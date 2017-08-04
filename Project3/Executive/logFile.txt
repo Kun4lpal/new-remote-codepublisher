@@ -1,0 +1,59 @@
+
+                                             CodeAnalysis
+    ==============================================================================================
+     Mon Apr  3 22:07:01 2017
+     Path: "C:\Users\kupal\Desktop\New folder\Project3\Project3\Executive"
+     Args: Executive.cpp, Executive.h, /m, /r, /f
+                                                                               
+           Code Metrics - Start Line, Size (lines/code), and Complexity (number of scopes)
+    ==============================================================================================
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                             namespace                   Global Namespace       1       1      56
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               Executive.h       class                        AnalFileMgr     106      26       7
+               Executive.h       class                          Executive     136      55      42
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             Executive.cpp    function                        AnalFileMgr     398       2       1
+             Executive.cpp    function                               file     404       7       1
+             Executive.cpp    function                                dir     414       4       1
+             Executive.cpp    function                               done     421       2       1
+             Executive.cpp    function                          numAFiles     427       3       1
+             Executive.cpp    function                           numADirs     434       3       1
+             Executive.cpp    function                          Executive     122       9       2
+             Executive.cpp    function                         ~Executive     135       2       1
+             Executive.cpp    function                          showUsage     141      13       1
+             Executive.cpp    function                   replaceSubString     157       8       2
+             Executive.cpp    function                             launch     169       5       1
+             Executive.cpp    function                 ProcessCommandLine     182      35       8
+             Executive.cpp    function           showCommandLineArguments     221      12       2
+             Executive.cpp    function                    getAnalysisPath     237       3       1
+             Executive.cpp    function                     getSourceFiles     248       8       1
+             Executive.cpp    function                     cppHeaderFiles     268      12       3
+             Executive.cpp    function                     cppImplemFiles     284      12       3
+             Executive.cpp    function                        csharpFiles     299      12       3
+             Executive.cpp    function                          fileSLOCs     314       3       1
+             Executive.cpp    function                         systemTime     320       9       1
+             Executive.cpp    function                  processSourceCode     333      48       8
+             Executive.cpp    function                           numFiles     385       3       1
+             Executive.cpp    function                            numDirs     392       3       1
+             Executive.cpp    function                       getTypeTable     475      17       1
+             Executive.cpp    function                        getInstance     116       3       1
+             Executive.cpp    function                           contains     259       5       1
+             Executive.cpp    function                           comments     438      34       1
+             Executive.cpp      lambda                                [])     496      39       3
+
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+
+
+
+    searched     3 dirs
+   processed     2 files

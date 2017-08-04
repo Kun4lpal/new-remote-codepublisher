@@ -1,0 +1,55 @@
+
+                                             CodeAnalysis
+    ==============================================================================================
+     Mon Feb  6 16:39:36 2017
+     Path: "C:\Kunal\Proj_1\Persist"
+     Args: Persist.h, /m, /r, /f
+                                                                               
+           Code Metrics - Start Line, Size (lines/code), and Complexity (number of scopes)
+    ==============================================================================================
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                             namespace                   Global Namespace       1       1      65
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                 Persist.h      struct                           IPersist      55      10       3
+                 Persist.h    function                          ~IPersist      56       2       1
+                 Persist.h    function                                 id      61       2       1
+                 Persist.h    function                    getDependencies      68       7       2
+                 Persist.h       class                      StringWrapper      82      13      19
+                 Persist.h    function                      StringWrapper      83       2       1
+                 Persist.h    function                         operator=(      99       4       1
+                 Persist.h    function                               save     106       3       1
+                 Persist.h    function                            restore     112       5       1
+                 Persist.h    function                      operatorstd::     121       3       1
+                 Persist.h    function                            xmlProc     128      29       9
+                 Persist.h    function                              toXml     161      38       4
+                 Persist.h       class                      DoubleWrapper     205      12      19
+                 Persist.h    function                      DoubleWrapper     206       2       1
+                 Persist.h    function                         operator=(     220       4       1
+                 Persist.h    function                               save     227       3       1
+                 Persist.h    function                            restore     233       6       1
+                 Persist.h    function                    operatordouble(     242       3       1
+                 Persist.h    function                            xmlProc     249      30       9
+                 Persist.h    function                              toXml     283      38       4
+                 Persist.h       class                      WidgetWrapper     327      13      21
+                 Persist.h    function                      WidgetWrapper     328       1       1
+                 Persist.h    function                      WidgetWrapper     329       2       1
+                 Persist.h    function                         operator=(     343       4       1
+                 Persist.h    function                               save     353      21       1
+                 Persist.h    function                            restore     377       8       1
+                 Persist.h    function                    operatorWidget(     388       3       1
+                 Persist.h    function                            xmlProc     395      34      10
+                 Persist.h    function                              toXml     433      36       4
+
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+
+
+
+    searched     3 dirs
+   processed     1 files

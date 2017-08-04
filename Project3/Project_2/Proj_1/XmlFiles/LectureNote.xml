@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- XML test case -->
+<root>
+  <first>
+     <name>jeff</name>
+     <category>professional</category>
+     <timedate>1/26/2017</timedate>
+     <data>xo</data>
+  </first>
+  <second> 
+    <name>red</name>
+    <category>pro</category>
+    <timedate>17</timedate>
+    <data>asd</data>
+</second>
+</root>

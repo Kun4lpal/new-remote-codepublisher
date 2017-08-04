@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            /* These script functions are executed only when invoked from the body */
+            
+            function myFunc(id)
+                        {
+                            var x = document.getElementById(id);
+                
+                if (x.style.display === 'none') {
+                    x.style.display = 'block';
+                } else {
+                    x.style.display = 'none';
+                }
+                        }
+            
+            
+                /* ----------------------------------------------------------
+                 * write a line break at current document location
+                 */
+                 function myFunction() {
+               var x = document.getElementById('myDIV');
+                if (x.style.display === 'none') {
+                    x.style.display = 'block';
+                } else {
+                    x.style.display = 'none';
+                }
+            }
+                /* ----------------------------------------------------------
+                 * return document node with specified id
+                 * - ids should be unique
+                 */
+                function find(id)
+                {
+                  return document.getElementById(id);
+                }
+                /* ----------------------------------------------------------
+                 * click event handler toggles text
+                 */
+                function clickEvent(button_)
+                {
+                  var node = find("placeholder");
+                  if (node === "undefined")
+                    return;
+                  if (button_ !== "undefined")
+                  {
+                    if (button_.className == "buttonNoPress")
+                      button_.className = "buttonPress";
+                    else
+                      button_.className = "buttonNoPress";
+                  }
+                  if (node.innerHTML == "")
+                    node.innerHTML = "That\'s almost all folks!";
+                  else
+                    node.innerHTML = "";
+                }
+                /* ----------------------------------------------------------
+                 * Set event handler
+                 */
+                function setHandler(id, event, handler)
+                {
+                  var elem = find(id);
+                  if (elem === undefined)
+                    return;
+                  elem.addEventListener('click', handler, false /* don't use capture */);
+                }
+
+        </script>
+        <style>
+             /* CSS styles for HTML elements */
+            
+                body {
+                  font-family: Tahoma;
+                  font-size: large;
+                  margin: 5%;
+                }
+            
+                section {
+                  margin: 20px 0px;
+                }
+            
+                h4 {
+                  margin-bottom: 10px;
+                }
+            
+                table tr td {
+                  padding-top: 0px;
+                }
+                /* applies to first td in first tr in table */
+            
+                td {
+                  padding: 5px 10px 0px 0px;
+                }
+                /* overridden by first td - it's selection is more specific */
+            
+                header {
+                  padding: 0px 0px 20px 0px;
+                  margin-top: -20px;
+                  margin-bottom: 10px;
+                }
+            
+                footer {
+                  padding: 20px 0px 0px 0px;
+                }
+            
+                /* CSS class styles */
+            
+                .center {
+                  text-align: center;
+                }
+            
+                .left {
+                  float: left;
+                }
+            
+                .right {
+                  float: right;
+                }
+            
+                .clear {
+                  clear: both;
+                }
+            
+                .note {
+                  background-color: black;
+                  color: yellow;
+                }
+            
+                .indent {
+                  margin: 0px 20px;
+                }
+            
+                .buttonNoPress {
+                  width: 100px;
+                  height: 40px;
+                  background-color: #acf;
+                  border-color: black;
+                  border-width: 1px 3px 3px 1px;
+                  border-radius: 6px 8px;
+                  border-style: solid;
+                  text-align: center;
+                  vertical-align: middle;
+                  line-height: 40px;
+                  font-weight: bold;
+                  /* prevent user from accidentally selecting text */
+                  -moz-user-select: none;
+                  -webkit-user-select: none;
+                  -ms-user-select: none;
+                  user-select: none;
+                }
+            
+                .buttonPress {
+                  width: 100px;
+                  height: 40px;
+                  background-color: #7bd;
+                  border-color: black;
+                  border-width: 3px 1px 1px 3px;
+                  border-radius: 6px 8px;
+                  border-style: solid;
+                  text-align: center;
+                  vertical-align: middle;
+                  line-height: 40px;
+                  font-weight: bold;
+                  /* prevent user from accidentally selecting text */
+                  -moz-user-select: none;
+                  -webkit-user-select: none;
+                  -ms-user-select: none;
+                  user-select: none;
+                }
+            
+                .bigAndBold {
+                  font-weight: bold;
+                  font-size: larger;
+                }
+            
+                .spacer {
+                  height: 25px;
+                }
+            
+                .top {
+                  vertical-align: top;
+                }
+            
+                .solidUnderline {
+                  border-bottom: solid;
+                  display: table-cell;
+                  padding-bottom: 5px;
+                }
+            
+                .dashedUnderline {
+                  border-bottom: dashed;
+                  display: table-cell;
+                  padding-bottom: 5px;
+
+        </style>
+        <script type="text/javascript" src="lib.js"></script>
+    </head>
+    <body>
+        <h3>
+            Dependencies!
+
+        </h3>
+        <a class="indent" href="Cpp11-BlockingQueue.cpp.htm">
+            Cpp11-BlockingQueue.cpp.htm
+
+        </a>
+        <pre>
+            #include "Executive.h"
+            #include "../HtmlDocument/Universal.h"
+            #include "../HtmlDocument/Document.h"
+            #include "../HtmlDocument/Tag.h"
+            #include "../Project_2/DependencyAnalysis/DependencyAnalysis.h"
+            #include "../Project_2/CodeAnalyzer/FileMgr/FileMgr.h"
+            #include "../Project_2/CodeAnalyzer/FileMgr/IFileMgr.h"
+            #include &lt;fstream&gt;
+            #include &lt;sstream&gt;
+            #include &lt;algorithm&gt;
+            #include &lt;iostream&gt;
+            
+            using namespace Universal;
+            
+            Executive::Executive()
+            {
+            }
+            
+            
+            Executive::~Executive()
+            {
+            }
+            
+            std::string Executive::replaceStrChar(std::string src, const std::string& target, const std::string& repl) {
+            <button onclick="myFunc('replaceStrChar22')" class="w3 - btn w3 - hover - black w3 - dark - grey" style="box - shadow:none">CLICK</button>
+            <div id="replaceStrChar22" style ="display:none" >
+            
+            
+            	// handle error situations/trivial cases
+            
+            	if (target.length() == 0) {
+            		// searching for a match to the empty string will result in 
+            		//  an infinite loop
+            		//  it might make sense to throw an exception for this case
+            		return src;
+            	}
+            
+            	if (src.length() == 0) {
+            		return src;  // nothing to match against
+            	}
+            
+            	size_t idx = 0;
+            
+            	for (;;) {
+            		idx = src.find(target, idx);
+            		if (idx == std::string::npos)  break;
+            
+            		src.replace(idx, target.length(), repl);
+            		idx += repl.length();
+            	}
+            
+            	return src;
+            
+            
+            </div>}
+            
+            std::string Executive::getFileString(std::string fileName) {
+            <button onclick="myFunc('getFileString22')" class="w3 - btn w3 - hover - black w3 - dark - grey" style="box - shadow:none">CLICK</button>
+            <div id="getFileString22" style ="display:none" >
+            
+            	std::string line;
+            	std::ostringstream ss;
+            	std::ifstream myReadFile(fileName);
+            	if (myReadFile.is_open()) {
+            		while (std::getline(myReadFile, line))
+            		{
+            			//std::cout &lt;&lt; line&lt;&lt;std::endl;
+            			ss &lt;&lt; line &lt;&lt; std::endl;
+            		}
+            		myReadFile.close();
+            	}
+            	else
+            	{
+            		std::cout &lt;&lt; "Unable to open file\n";
+            	}
+            	return ss.str();
+            
+            </div>}
+            
+            void Executive::createHtmlFile()
+            {
+            	std::string html = "";
+            }
+            
+            int main(char argc, char* argv[]) {
+            <button onclick="myFunc('main22')" class="w3 - btn w3 - hover - black w3 - dark - grey" style="box - shadow:none">CLICK</button>
+            <div id="main22" style ="display:none" >
+            	Executive ex;
+            
+            	//std::cout &lt;&lt; test &lt;&lt; std::endl;
+            
+            	Universal::Document doc;
+            	doc.AddTagToBody(Universal::Tag("h3").SetContent("Dependencies!"));
+            	doc.AddTagToBody(Universal::Tag("a.indent").SetContent("Cpp11-BlockingQueue.cpp.htm").SetAttribute("href", "Cpp11-BlockingQueue.cpp.htm"));
+            	std::string test = ex.getFileString("Executive.cpp");
+            
+            	Tag x;
+            	test = x.modifyString(test, "main");
+            	test = x.modifyString(test, "getFileString");
+            	test = x.modifyString(test, "replaceStrChar");
+            	std::cout &lt;&lt; test;
+            
+            
+            	doc.AddTagToBody(Universal::Tag("pre").SetContent(test));
+            
+            	std::string JavaScript = ex.getFileString("script2.txt");
+            
+            	std::string script = ex.getFileString("Functions.txt");
+            
+            
+            	doc.AddTagToHead(Universal::Tag("script").SetContent(script));
+            	doc.AddTagToHead(Universal::Tag("style").SetContent(JavaScript));
+            
+            	Tag m("script");
+            	m.SetAttribute("type", "text/javascript");
+            	m.SetAttribute("src", "lib.js");
+            	doc.AddTagToHead(m);
+            
+            	Tag section("section");
+            	Tag secH4("h4");
+            	secH4.SetContent("EVENT");
+            	Tag indent("div.indent");
+            
+            	Tag button("div");
+            	button.SetAttribute("class", "buttonNoPress");
+            	button.SetAttribute("id", "button");
+            	button.SetContent("Click Me!");
+            	std::string t = ex.getFileString("clickMe.txt");
+            	Tag CURRENT("script");
+            	CURRENT.SetContent(t);
+            	button.AppendChild(CURRENT);
+            
+            	Tag spacer("div");
+            	spacer.SetAttribute("class", "spacer");
+            	Tag placeHolder("div");
+            	placeHolder.SetAttribute("class", "bigAndBold");
+            	placeHolder.SetAttribute("id", "placeholder");
+            
+            	//indent.AppendChild(button);
+            	indent.AppendChild(spacer);
+            	indent.AppendChild(placeHolder);
+            	//section.AppendChild(secH4);
+            	section.AppendChild(indent);
+            	doc.AddTagToBody(section);
+            
+            
+            	//&lt;hr&gt;
+            	/*&lt;p class = "intro"&gt;Toggle between hiding and showing an element with JavaScript.&lt; / p&gt;
+            	&lt;hr&gt;
+            	&lt;button onclick = "myFunction()" class = "w3-btn w3-hover-black w3-dark-grey" style = "box-shadow:none"&gt;Toggle Hide and Show&lt; / button&gt;*/
+            
+            	/*Tag tag("button");
+            	tag.SetAttribute("onclick","myFunction()");
+            	tag.SetAttribute("class", "w3-btn w3-hover-black w3-dark-grey");
+            	tag.SetAttribute("style","box-shadow:none");
+            	tag.SetContent("Toggle Hide and Show");
+            	doc.AddTagToBody(tag);*/
+            
+            	return doc.WriteToFile("index.html", Universal::Readability::MULTILINE);
+            
+            
+            </div>}
+
+        </pre>
+        <section>
+            <div class="indent">
+                <div class="spacer"></div>
+                <div class="bigAndBold" id="placeholder"></div>
+            </div>
+        </section>
+    </body>
+</html>

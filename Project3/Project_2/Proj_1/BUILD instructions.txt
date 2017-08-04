@@ -1,0 +1,30 @@
+Build Instructions:
+
+1. The startup project is set as Executive. Paths for the required XML files to run this
+   project are set for execution through command line. Make sure to run compile.bat first.
+
+2. In order to build this project through visual studio you have to make the following changes in 
+   path location:
+   
+   Go to run.cpp file and change path from:
+   a) Line 242, change src2 path from "XmlFiles/lect.xml"  to "../XmlFiles/lect.xml".
+   b) Line 286, change src2 path from "XmlFiles/widget.xml" to "../XmlFiles/widget.xml".
+   c) Line 397, change src path from "XmlFiles/MainXml.xml to ../XmlFiles/MainXml.xml.
+
+   Go to NoSqlDb.h file and change path from:
+   a) Line 328, change path from "PersistedData/" + filename + ".xml" to "../PersistedData/" + filename + ".xml"
+
+ 3. Note: first run compile.bat and then run.bat. Executive.exe will only get updated after 
+    compiling once.
+
+ 4. While testing  any other projects set all other projects to static library after undefining 
+    their test stubs.
+
+
+
+NOTE: ALL PERSISTED XMLS ARE AVAILABLE IN PersistedData FOLDER.
+      ALL THE XMLS FOR AUGMENTING DATABASE ARE FETCHED FROM XmlFiles FOLDER.
+
+
+ 5. TIMED PERSISTANCE IS SET OFF BY DEFAULT (in lines 259,304). After making changes save project
+    and compile once before running in command line.

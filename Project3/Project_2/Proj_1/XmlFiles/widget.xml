@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- XML test case -->
+<root>
+  <first>
+     <name>jeff</name>
+     <category>professional</category>
+     <timedate>2017-03-01</timedate>
+     <dependency>red</dependency>
+     <data>
+      <WidgetWrapper>
+              <wint> 12 </wint>
+              <wstr>nike</wstr>
+     </WidgetWrapper>
+   </data>
+  </first>
+  <second> 
+    <name>red</name>
+    <category>pro</category>
+    <timedate>2017-01-21</timedate>
+    <dependency>Sarah</dependency>
+    <data>
+   <WidgetWrapper>
+       <wint>55</wint>
+       <wstr>redas</wstr>
+   </WidgetWrapper>
+    </data>
+</second>
+</root>

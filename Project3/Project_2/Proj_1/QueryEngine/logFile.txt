@@ -1,0 +1,64 @@
+
+                                             CodeAnalysis
+    ==============================================================================================
+     Mon Feb  6 16:38:56 2017
+     Path: "C:\Kunal\Proj_1\QueryEngine"
+     Args: QueryEngine.h, /m, /r, /f
+                                                                               
+           Code Metrics - Start Line, Size (lines/code), and Complexity (number of scopes)
+    ==============================================================================================
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                             namespace                   Global Namespace       1       1     148
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             QueryEngine.h      struct                             IQuery      65      14       7
+             QueryEngine.h    function                            ~IQuery      65       2       1
+             QueryEngine.h    function                                 id      76       2       1
+             QueryEngine.h    function                        orOperation      82       6       1
+             QueryEngine.h    function                              regex      92       9       2
+             QueryEngine.h    function                      isSubSequence     106      12       1
+             QueryEngine.h       class                        stringQuery     123      17      51
+             QueryEngine.h    function                        stringQuery     124       2       1
+             QueryEngine.h    function                         operator=(     143       4       1
+             QueryEngine.h    function                          ofPattern     150      19       7
+             QueryEngine.h    function                    subStringInItem     173      23       7
+             QueryEngine.h    function                subStringInCategory     200      23       7
+             QueryEngine.h    function                     withinTimeDate     227      25       7
+             QueryEngine.h    function         keysWithStringInDataMember     256      24       7
+             QueryEngine.h    function                         valueOfKey     284      21       7
+             QueryEngine.h    function                       findChildren     308      17       5
+             QueryEngine.h    function                         operator()     329       3       1
+             QueryEngine.h       class                        doubleQuery     337      15      44
+             QueryEngine.h    function                        doubleQuery     338       2       1
+             QueryEngine.h    function                         operator=(     356       4       1
+             QueryEngine.h    function                         valueOfKey     363      20       7
+             QueryEngine.h    function                       findChildren     387      17       5
+             QueryEngine.h    function                         operator()     408       3       1
+             QueryEngine.h    function                subStringInCategory     415      25       7
+             QueryEngine.h    function                          ofPattern     444      20       7
+             QueryEngine.h    function                    subStringInItem     468      25       7
+             QueryEngine.h    function                     withinTimeDate     497      25       7
+             QueryEngine.h       class                        widgetQuery     527      16      45
+             QueryEngine.h    function                        widgetQuery     528       1       1
+             QueryEngine.h    function                        widgetQuery     529       2       1
+             QueryEngine.h    function                         operator=(     545       4       1
+             QueryEngine.h    function                         valueOfKey     553      21       7
+             QueryEngine.h    function                          ofPattern     578      20       7
+             QueryEngine.h    function                subStringInCategory     602      25       7
+             QueryEngine.h    function                    subStringInItem     631      26       7
+             QueryEngine.h    function                       findChildren     661      17       5
+             QueryEngine.h    function                         operator()     680       3       1
+             QueryEngine.h    function                     withinTimeDate     687      25       7
+
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+
+
+
+    searched     3 dirs
+   processed     1 files

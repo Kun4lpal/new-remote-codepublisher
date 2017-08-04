@@ -1,0 +1,20 @@
+﻿  Client2.cpp
+c:\kunal\course\ood\9-26\project4\client2\client2.cpp(315): warning C4244: 'argument': conversion from '__int64' to 'long', possible loss of data
+c:\kunal\course\ood\9-26\project4\client2\client2.cpp(350): warning C4244: 'argument': conversion from '__int64' to 'long', possible loss of data
+c:\kunal\course\ood\9-26\project4\client2\client2.cpp(382): warning C4244: 'argument': conversion from '__int64' to 'long', possible loss of data
+c:\kunal\course\ood\9-26\project4\client2\client2.cpp(414): warning C4244: 'argument': conversion from '__int64' to 'long', possible loss of data
+c:\kunal\course\ood\9-26\project4\client2\client2.cpp(429): warning C4305: 'argument': truncation from 'int' to 'char'
+c:\kunal\course\ood\9-26\project4\client2\client2.cpp(429): warning C4309: 'argument': truncation of constant value
+c:\kunal\course\ood\9-26\project4\client2\client2.cpp(463): warning C4244: 'argument': conversion from '__int64' to 'long', possible loss of data
+c:\kunal\course\ood\9-26\project4\client2\client2.cpp(494): warning C4244: 'argument': conversion from '__int64' to 'long', possible loss of data
+c:\kunal\course\ood\9-26\project4\client2\client2.cpp(540): warning C4244: 'argument': conversion from '__int64' to 'long', possible loss of data
+c:\kunal\course\ood\9-26\project4\client2\client2.cpp(545): warning C4273: 'ObjectFactory::createSendr': inconsistent dll linkage
+  c:\kunal\course\ood\9-26\project4\clientcommchannel\icommchannel.h(40): note: see previous definition of 'createSendr'
+c:\kunal\course\ood\9-26\project4\client2\client2.cpp(547): warning C4273: 'ObjectFactory::createRecvr': inconsistent dll linkage
+  c:\kunal\course\ood\9-26\project4\clientcommchannel\icommchannel.h(41): note: see previous definition of 'createRecvr'
+c:\kunal\course\ood\9-26\project4\client2\client2.cpp(550): warning C4273: 'ObjectFactory::createMockChannel': inconsistent dll linkage
+  c:\kunal\course\ood\9-26\project4\clientcommchannel\icommchannel.h(42): note: see previous definition of 'createMockChannel'
+  LINK : C:\Kunal\Course\OOD\9-26\Project4\Debug\Client2.exe not found or not built by the last incremental link; performing full link
+     Creating library C:\Kunal\Course\OOD\9-26\Project4\Debug\Client2.lib and object C:\Kunal\Course\OOD\9-26\Project4\Debug\Client2.exp
+  Client2.vcxproj -> C:\Kunal\Course\OOD\9-26\Project4\Debug\Client2.exe
+  Client2.vcxproj -> C:\Kunal\Course\OOD\9-26\Project4\Debug\Client2.pdb (Full PDB)

@@ -1,0 +1,14 @@
+C:\Kunal\Course\OOD\Proj2\Project_2 b4 dbpersist\Project_2\TestFiles
+false
+false
+false
+true
+A.cpp,A.h,B.cpp,B.h,C.cpp,C.h,D.cpp,D.h,E.cpp,E.h,logFile.txt,XMLFILE.xml
+false
+true
+false
+false
+true
+false
+false
+true

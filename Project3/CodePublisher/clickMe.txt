@@ -1,0 +1,4 @@
+// need an anonymous function to provide clickEvent with its argument
+   var wrappedHandler = function() { clickEvent(this); };
+   setHandler('button', 'click', wrappedHandler);
+

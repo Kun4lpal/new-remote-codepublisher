@@ -1,0 +1,37 @@
+
+                                             CodeAnalysis
+    ==============================================================================================
+     Tue Mar  7 18:35:17 2017
+     Path: "C:\Kunal\Course\OOD\Proj2\v1\Project_2\StrongComponents"
+     Args: StrongComponents.cpp, StrongComponents.h, /m, /r, /f
+                                                                               
+           Code Metrics - Start Line, Size (lines/code), and Complexity (number of scopes)
+    ==============================================================================================
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                             namespace                   Global Namespace       1       1      25
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+        StrongComponents.h       class                   StrongComponents      68      18      19
+        StrongComponents.h    function                   StrongComponents      70       1       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+      StrongComponents.cpp    function                  ~StrongComponents      56       2       1
+      StrongComponents.cpp    function               findStrongComponents      62      16       6
+      StrongComponents.cpp    function                      strongConnect      82      34       8
+      StrongComponents.cpp    function                         returnList     120       3       1
+      StrongComponents.cpp    function                             getVal     130       3       1
+      StrongComponents.cpp    function                               main     134      32       5
+
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+
+
+
+    searched     3 dirs
+   processed     2 files

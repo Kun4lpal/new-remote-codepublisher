@@ -1,0 +1,32 @@
+
+
+Help with running this application without command Line:
+
+1) This project is configured to run using command Line.
+2) In order to run this application using visual studio perform the following simple changes:
+
+  In Executive.cpp :
+   a) Line 509 change path from Scripts/CSS-sheet.css to ../Scripts/CSS-sheet.css
+   b) Line 512 change path from Scripts/script.js to ../Scripts/script.js   
+   c) Line 525 change path from "HtmlFiles" to "../HtmlFiles"
+   d) Line 529 change path from "HtmlFiles" to "../HtmlFiles"
+   e) Line 530 change path from "HtmlFiles/DependencyAnalysis.cpp.htm" to "../HtmlFiles/DependencyAnalysis.cpp.htm".
+
+3) Note in order to perform test on each package set the rest of the dependent package as static. Change from NO_TEST_PACKAGENAME to 
+   TEST_PACKAGENAME.
+
+
+
+COMMAND LINE ARGUMENT HELP:
+
+1) first argument specifies the location of test files and the type of files header/cpp
+2) second argument specifies either of the two types below:
+
+for LAUNCH FILE:
+path = ../example/example.html
+argument = "launch/" + path;  KEYWORD LAUNCH is used for changing the default launch path.
+
+for changing path for publishing HtmlFiles from default path.
+path = ../example
+argument = path;
+...............................................................End.............................................................

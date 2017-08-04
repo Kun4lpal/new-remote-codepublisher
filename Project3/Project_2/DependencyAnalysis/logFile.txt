@@ -1,0 +1,37 @@
+
+                                             CodeAnalysis
+    ==============================================================================================
+     Mon Apr  3 23:36:15 2017
+     Path: "C:\Users\kupal\Desktop\New folder\Project3\Project3\Project_2\DependencyAnalysis"
+     Args: DependencyAnalysis.cpp, DependencyAnalysis.h, /m, /r, /f
+                                                                               
+           Code Metrics - Start Line, Size (lines/code), and Complexity (number of scopes)
+    ==============================================================================================
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                             namespace                   Global Namespace       1       1      36
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+      DependencyAnalysis.h       class                 DependencyAnalysis      82      16      28
+      DependencyAnalysis.h    function                 DependencyAnalysis      84       1       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+    DependencyAnalysis.cpp    function                storeDependencyInfo      61      14       2
+    DependencyAnalysis.cpp    function               intializeDepAnalysis      79      42      10
+    DependencyAnalysis.cpp    function                          addUsings     124      20       7
+    DependencyAnalysis.cpp    function                        createGraph     148      24       6
+    DependencyAnalysis.cpp    function                           getGraph     176       3       1
+    DependencyAnalysis.cpp    function                               main     183      41       7
+
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+
+
+
+    searched     3 dirs
+   processed     2 files

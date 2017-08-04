@@ -1,0 +1,21 @@
+BUILD INSTRUCTIONS:
+
+1) In order to run the GUI :
+   BUILD the project first, this will create the TestExecution image which is then run by the GUI. 
+   Go to the the search directory, type the folderName and click on Start Analysis Button. 
+
+2) TO test other packages set the test executive as a static library, go to pre-processing  
+   in the properties of the package and change "TEST_EXECUTIVE" to "NO_TEST_EXECUTIVE".
+
+3) Then go the package which has to be tested and change "TEST_package_name" to 
+   "NO_TEST_ package_name".
+
+   COMMAND LINE ARGUMENTS:
+
+   ../TestFiles ../XmlFiles *.h *.cpp
+
+ Note: 
+    First run compile.bat and then run.bat. Executive.exe will only get updated after 
+    compiling once.
+
+NOTE: ALL PERSISTED XMLS ARE AVAILABLE IN XmlFiles FOLDER.

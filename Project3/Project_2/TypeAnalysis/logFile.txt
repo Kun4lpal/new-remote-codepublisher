@@ -1,0 +1,32 @@
+
+                                             CodeAnalysis
+    ==============================================================================================
+     Fri Mar 17 19:18:07 2017
+     Path: "C:\Kunal\Course\OOD\New folder\Project_2\Project_2\TypeAnalysis"
+     Args: TypeAnalysis.cpp, /m, /r, /f
+                                                                               
+           Code Metrics - Start Line, Size (lines/code), and Complexity (number of scopes)
+    ==============================================================================================
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                             namespace                   Global Namespace       1       1      27
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+          TypeAnalysis.cpp    function                      filltypeTable      58       6       1
+          TypeAnalysis.cpp    function                                DFS      67      37      11
+          TypeAnalysis.cpp    function                       getMainTable     108       3       1
+          TypeAnalysis.cpp    function                     doTypeAnalysis     112      23       6
+          TypeAnalysis.cpp    function                               main     140      35       7
+
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+          TypeAnalysis.cpp    function                                DFS      67      37      11
+
+
+
+    searched     3 dirs
+   processed     1 files

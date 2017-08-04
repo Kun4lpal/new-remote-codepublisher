@@ -1,0 +1,41 @@
+
+                                             CodeAnalysis
+    ==============================================================================================
+     Mon Apr  3 22:06:13 2017
+     Path: "C:\Users\kupal\Desktop\New folder\Project3\Project3\CodePublisher"
+     Args: CodePublisher.cpp, CodePublisher.h, /m, /r, /f
+                                                                               
+           Code Metrics - Start Line, Size (lines/code), and Complexity (number of scopes)
+    ==============================================================================================
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                             namespace                   Global Namespace       1       1      36
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+           CodePublisher.h   namespace                           CPublish      51      20      32
+           CodePublisher.h       class                      CodePublisher      54      17      31
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+         CodePublisher.cpp    function                      CodePublisher      64       2       1
+         CodePublisher.cpp    function                      CodePublisher      70       3       1
+         CodePublisher.cpp    function                     ~CodePublisher      77       2       1
+         CodePublisher.cpp    function                     replaceStrChar      83      20       4
+         CodePublisher.cpp    function                      getFileString     107      17       4
+         CodePublisher.cpp    function                    addCSSandScript     128       9       1
+         CodePublisher.cpp    function                     publishFileSet     141      45       9
+         CodePublisher.cpp    function                        getTypeList     190      15       4
+         CodePublisher.cpp    function                     testPublishing     209      31       5
+         CodePublisher.cpp      lambda                                [])     245      22       3
+
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+
+
+
+    searched     3 dirs
+   processed     2 files

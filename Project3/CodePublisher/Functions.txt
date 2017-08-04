@@ -1,0 +1,63 @@
+/* These script functions are executed only when invoked from the body */
+
+function myFunc(id)
+            {
+                var x = document.getElementById(id);
+    
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+            }
+
+
+    /* ----------------------------------------------------------
+     * write a line break at current document location
+     */
+     function myFunction() {
+   var x = document.getElementById('myDIV');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+    /* ----------------------------------------------------------
+     * return document node with specified id
+     * - ids should be unique
+     */
+    function find(id)
+    {
+      return document.getElementById(id);
+    }
+    /* ----------------------------------------------------------
+     * click event handler toggles text
+     */
+    function clickEvent(button_)
+    {
+      var node = find("placeholder");
+      if (node === "undefined")
+        return;
+      if (button_ !== "undefined")
+      {
+        if (button_.className == "buttonNoPress")
+          button_.className = "buttonPress";
+        else
+          button_.className = "buttonNoPress";
+      }
+      if (node.innerHTML == "")
+        node.innerHTML = "That\'s almost all folks!";
+      else
+        node.innerHTML = "";
+    }
+    /* ----------------------------------------------------------
+     * Set event handler
+     */
+    function setHandler(id, event, handler)
+    {
+      var elem = find(id);
+      if (elem === undefined)
+        return;
+      elem.addEventListener('click', handler, false /* don't use capture */);
+    }

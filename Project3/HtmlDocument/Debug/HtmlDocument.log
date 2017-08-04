@@ -1,0 +1,5 @@
+﻿  Tag.cpp
+c:\kunal\course\ood\9-26\project4\project3\htmldocument\tag.cpp(223): warning C4804: '<': unsafe use of type 'bool' in operation
+  Document.cpp
+  Generating Code...
+  HtmlDocument.vcxproj -> C:\Kunal\Course\OOD\9-26\Project4\Debug\HtmlDocument.lib

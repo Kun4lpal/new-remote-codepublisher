@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- XML test case -->
+<root>
+  <first1>
+     <name>Convert</name>
+     <category>package</category>
+     <timedate>2012-02-02</timedate>
+     <data><DoubleWrapper>1.1</DoubleWrapper></data>
+  </first1>
+<first2>
+     <name>CppProperties</name>
+     <category>package</category>
+     <timedate>2014-02-02</timedate>
+     <data><DoubleWrapper>1.2</DoubleWrapper></data>
+  </first2>
+<first3>
+     <name>Executive</name>
+     <category>package</category>
+     <timedate>2009-02-02</timedate>
+     <dependency>XmlDocument</dependency>
+     <dependency>Persist</dependency>
+     <dependency>NoSqlDb</dependency>
+     <dependency>XmlParser</dependency>
+     <dependency>QueryEngine</dependency>
+     <data><DoubleWrapper>1.3</DoubleWrapper></data>
+  </first3>
+<first4>
+     <name>NoSqlDb</name>
+     <category>package</category>
+     <timedate>2032-02-02</timedate>
+     <dependency>XmlDocument</dependency>
+     <dependency>QueryEngine</dependency>
+     <dependency>Persist</dependency>
+     <data><DoubleWrapper>1.4</DoubleWrapper></data>
+  </first4>
+<first5>
+     <name>Persist</name>
+     <category>package</category>
+     <timedate>2044-02-03</timedate>
+     <dependency>XmlDocument</dependency>
+     <dependency>Utilities</dependency>
+     <data><DoubleWrapper>1.5</DoubleWrapper></data>
+  </first5>
+<first6>
+     <name>QueryEngine</name>
+     <category>package</category>
+     <timedate>2017-12-02</timedate>
+     <dependency>XmlDocument</dependency>
+     <dependency>Persist</dependency>
+     <data><DoubleWrapper>1.6</DoubleWrapper></data>
+  </first6>
+<first7>
+     <name>Utilites</name>
+     <category>package</category>
+     <timedate>2017-01-02</timedate>
+     <data><DoubleWrapper>1.7</DoubleWrapper></data>
+  </first7>
+<first8>
+     <name>XmlDocument</name>
+     <category>package</category>
+     <timedate>2017-09-02</timedate>
+     <dependency>XmlParser</dependency>
+     <data><DoubleWrapper>1.8</DoubleWrapper></data>
+  </first8>
+ <first9> 
+    <name>XmlParser</name>
+    <category>package</category>
+    <timedate>2017-02-02</timedate>
+    <data><DoubleWrapper>1.9</DoubleWrapper></data>
+</first9>
+</root>

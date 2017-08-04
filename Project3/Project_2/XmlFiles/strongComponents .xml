@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf - 8"?>
+<!--XML test case -->
+  <test>
+    <Strong Component 1>
+      <name>
+        Strong Component 1
+      </name>
+      <category>
+        StrongComponent
+      </category>
+      <timedate>
+        Sun Mar 6 03:30:58 2017
+      </timedate>
+      <dependency>
+        B.cpp
+      </dependency>
+      <dependency>
+        B.h
+      </dependency>
+      <dependency>
+        A.h
+      </dependency>
+      <dependency>
+        A.cpp
+      </dependency>
+      <data>
+        [B.cpp] [B.h] [A.h] [A.cpp] .
+      </data>
+    </Strong Component 1>
+    <Strong Component 2>
+      <name>
+        Strong Component 2
+      </name>
+      <category>
+        StrongComponent
+      </category>
+      <timedate>
+        Sun Mar 6 03:30:58 2017
+      </timedate>
+      <dependency>
+        D.h
+      </dependency>
+      <dependency>
+        D.cpp
+      </dependency>
+      <data>
+        [D.h] [D.cpp] .
+      </data>
+    </Strong Component 2>
+    <Strong Component 3>
+      <name>
+        Strong Component 3
+      </name>
+      <category>
+        StrongComponent
+      </category>
+      <timedate>
+        Sun Mar 6 03:30:58 2017
+      </timedate>
+      <dependency>
+        C.cpp
+      </dependency>
+      <dependency>
+        C.h
+      </dependency>
+      <data>
+        [C.cpp] [C.h] .
+      </data>
+    </Strong Component 3>
+    <Strong Component 4>
+      <name>
+        Strong Component 4
+      </name>
+      <category>
+        StrongComponent
+      </category>
+      <timedate>
+        Sun Mar 6 03:30:58 2017
+      </timedate>
+      <dependency>
+        E.cpp
+      </dependency>
+      <dependency>
+        E.h
+      </dependency>
+      <data>
+        [E.cpp] [E.h] .
+      </data>
+    </Strong Component 4>
+  </test>

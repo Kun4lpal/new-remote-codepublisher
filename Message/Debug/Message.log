@@ -1,0 +1,3 @@
+﻿  HttpMessage.cpp
+c:\kunal\course\ood\9-26\project4\message\httpmessage.cpp(274): warning C4018: '<': signed/unsigned mismatch
+  Message.vcxproj -> C:\Kunal\Course\OOD\9-26\Project4\Debug\Message.lib

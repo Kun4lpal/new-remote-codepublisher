@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script src="../Scripts/Script.js"></script>
+  <link rel="stylesheet" href="../Scripts/CSS-sheet.css"></link>
+  </head>
+  <body>
+  <h3>
+  Dependencies!
+
+  </h3>
+  <h4>
+  <a class="indent" href="AbstrSynTree.cpp.htm">
+  1- AbstrSynTree.cpp
+
+  </a>
+  </h4>
+  <pre>
+   purpose is to support sending messages between threads.
+   * It is implemented using C++11 threading constructs including 
+   * std::condition_variable and std::mutex.  The underlying storage
+   * is provided by the non-thread-safe std::queue&lt;T&gt;.
+   *
+   * Required Files:
+   * ---------------
+   * Cpp11-BlockingQueue.h
+   *
+   * Build Process:
+   * --------------
+   * devenv Cpp11-BlockingQueue.sln /rebuild debug
+   *
+   * Maintenance History:
+   * --------------------
+   * ver 1.4 : 29 Jul 2016
+   * - wrapped with namespace Async
+   * ver 1.3 : 04 Mar 2016
+   * - changed behavior of front() to throw exception
+   *   on empty queue.
+   * - added comment about std::unique_lock in deQ()
+   * ver 1.2 : 27 Feb 2016
+   * - added front();
+   * - added move ctor and move assignment
+   * - deleted copy ctor and copy assignment
+   * ver 1.1 : 26 Jan 2015
+   * - added copy constructor and assignment operator
+   * ver 1.0 : 03 Mar 2014
+   * - first release
+   *
+   */
+  
+  #include &lt;condition_variable&gt;
+  #include &lt;mutex&gt;
+  #include &lt;thread&gt;
+  #include &lt;queue&gt;
+  #include &lt;string&gt;
+  #include &lt;iostream&gt;
+  #include &lt;sstream&gt;
+  
+  namespace Async
+  {
+    template &lt;typename T&gt;
+    class BlockingQueue {<button onclick="myFunc('class BlockingQueue22')" class="w3 - btn w3 - hover - black w3 - dark - grey" style="box - shadow:none">CLICK</button><div id="class BlockingQueue22" >
+    public:
+      BlockingQueue() {}
+      BlockingQueue(BlockingQueue&lt;T&gt;&& bq);
+      BlockingQueue&lt;T&gt;& operator=(BlockingQueue&lt;T&gt;&& bq);
+      BlockingQueue(const BlockingQueue&lt;T&gt;&) = delete;
+      BlockingQueue&lt;T&gt;& operator=(const BlockingQueue&lt;T&gt;&) = delete;
+      T deQ();
+      void enQ(const T& t);
+      T& front();
+      void clear();
+      size_t size();
+    private:
+      std::queue&lt;T&gt; q_;
+      std::mutex mtx_;
+      std::condition_variable cv_;
+    </div>};
+    //----&lt; move constructor &gt;---------------------------------------------
+  
+    template&lt;typename T&gt;
+    BlockingQueue&lt;T&gt;::BlockingQueue(BlockingQueue&lt;T&gt;&& bq) // need to lock so can't initialize
+    {
+      std::lock_guard&lt;std::mutex&gt; l(mtx_);
+      q_ = bq.q_;
+      while (bq.q_.size() &gt; 0)  // clear bq
+        bq.q_.pop();
+      /* can't copy  or move mutex or condition variable, so use default members */
+    }
+    //----&lt; move assignment &gt;----------------------------------------------
+  
+    template&lt;typename T&gt;
+    BlockingQueue&lt;T&gt;& BlockingQueue&lt;T&gt;::operator=(BlockingQueue&lt;T&gt;&& bq)
+    {
+      if (this == &bq) return *this;
+      std::lock_guard&lt;std::mutex&gt; l(mtx_);
+      q_ = bq.q_;
+      while (bq.q_.size() &gt; 0)  // clear bq
+        bq.q_.pop();
+      /* can't move assign mutex or condition variable so use target's */
+      return *this;
+    }
+    //----&lt; remove element from front of queue &gt;---------------------------
+  
+    template&lt;typename T&gt;
+    T BlockingQueue&lt;T&gt;::deQ()
+    {
+      std::unique_lock&lt;std::mutex&gt; l(mtx_);
+      /*
+         This lock type is required for use with condition variables.
+         The operating system needs to lock and unlock the mutex:
+         - when wait is called, below, the OS suspends waiting thread
+           and releases lock.
+         - when notify is called in enQ() the OS relocks the mutex,
+           resumes the waiting thread and sets the condition variable to
+           signaled state.
+         std::lock_quard does not have public lock and unlock functions.
+       */
+      if (q_.size() &gt; 0)
+      {
+        T temp = q_.front();
+        q_.pop();
+        return temp;
+      }
+      // may have spurious returns so loop on !condition
+  
+      while (q_.size() == 0)
+        cv_.wait(l, [this]() { return q_.size() &gt; 0; });
+      T temp = q_.front();
+      q_.pop();
+      return temp;
+    }
+    //----&lt; push element onto back of queue &gt;------------------------------
+  
+    template&lt;typename T&gt;
+    void BlockingQueue&lt;T&gt;::enQ(const T& t)
+    {
+      {have public lock and unlock functions.
+       */
+      if (q_.size() &gt; 0)
+      {
+        T temp = q_.front();
+        q_.pop();
+        return temp;
+      }
+      // may have spurious returns so loop on !condition
+  
+      while (q_.size() == 0)
+        cv_.wait(l, [this]() { return q_.size() &gt; 0; });
+      T temp = q_.front();
+      q_.pop();
+      return temp;
+    }
+    //----&lt; push element onto back of queue &gt;------------------------------
+  
+    template&lt;typename T&gt;
+    void BlockingQueue&lt;T&gt;::enQ(const T& t)
+    {
+      {
+
+  </pre>
+  </body>
+</html>

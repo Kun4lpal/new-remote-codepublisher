@@ -1,0 +1,1 @@
+.\Debug\TestExecutive.exe TestFiles XmlFiles *.h *.cpp
